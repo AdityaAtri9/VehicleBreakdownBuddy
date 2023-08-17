@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VehicleBreakdownBuddy</string>
+    <string name="title_activity_splashscreen">splashscreen</string>
 </resources>
