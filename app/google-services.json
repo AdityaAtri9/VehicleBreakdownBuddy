@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "163445899660",
+    "project_id": "vehiclebreakdownbuddy",
+    "storage_bucket": "vehiclebreakdownbuddy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163445899660:android:b81d6f1ca243dec51956a9",
+        "android_client_info": {
+          "package_name": "com.example.vehiclebreakdownbuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163445899660-o6he5uoiujji145hr4vf8tvs0g466624.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbUPSAQEFHg0Lcpw0tWA87dWkofaBlFnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163445899660-o6he5uoiujji145hr4vf8tvs0g466624.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
