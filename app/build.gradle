@@ -6,6 +6,11 @@ plugins {
 android {
     namespace 'com.example.vehiclebreakdownbuddy'
     compileSdk 33
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+        resources.excludes.add("xsd/catalog.xml")
+        resources.excludes.add(" javax.activation.ActivationDataFlavor ")
+        }
 
     defaultConfig {
         applicationId "com.example.vehiclebreakdownbuddy"
@@ -17,19 +22,15 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
-
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 }
 
@@ -38,9 +39,11 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.firebase:firebase-database-ktx:20.2.2'
+    implementation 'com.google.firebase:firebase-database:20.2.2'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'com.android.tools.build:gradle:8.1.0'
-}
+    implementation('jakarta.activation:jakarta.activation-api:2.1.2') {
+        exclude group: 'com.sun.activation', module: 'javax.activation'
+    }
+    }
