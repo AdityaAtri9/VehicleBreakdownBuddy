@@ -42,7 +42,7 @@
                 android:layout_marginTop="40dp"
                 android:padding="8dp"
                 android:hint="Name"
-                android:drawableLeft="@drawable/baseline_email_24"
+                android:drawableLeft="@drawable/baseline_person_pin_24"
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"/>
 
@@ -67,7 +67,7 @@
                 android:layout_marginTop="20dp"
                 android:padding="8dp"
                 android:hint="Username"
-                android:drawableLeft="@drawable/baseline_person_pin_24"
+                android:drawableLeft="@drawable/baseline_person_24"
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"/>
 
