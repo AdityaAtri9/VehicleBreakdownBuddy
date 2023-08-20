@@ -2,14 +2,40 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
 
     <!-- Replace this ImageView with your splash screen image or logo -->
+
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:id="@+id/splashImage"
+        android:layout_width="match_parent"
+        android:layout_height="394dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="174dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/hats" />
+
+    <TextView
+        android:id="@+id/splashText"
+        android:layout_width="278dp"
+        android:layout_height="135dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="149dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/open_sans_light"
+        android:text="\'Remember, in life's game, there's no respawn button.\nSo play wisely and stay alive out there!\'"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="23dp"
+        android:textStyle="italic" />
+
 
     <!-- You can add other UI elements here, such as a progress bar or animation -->
 
