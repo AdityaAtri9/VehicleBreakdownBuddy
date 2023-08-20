@@ -53,6 +53,6 @@ public class splashscreen extends AppCompatActivity {
                 // Close the splash activity, like turning off a light when we don't need it anymore
                 finish();
             }
-        },2500);  // screen visible for 3 sec
+        },3500);  // screen visible for 3 sec
     }
 }
