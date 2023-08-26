@@ -46,7 +46,7 @@ public class loginActivity extends AppCompatActivity {
                 }
             }
         });
-        // the upper code :-38 - 46
+        // the upper code :-40 - 48
         //Here, when you press the button, it checks if you put your username and password. If you did, it tries to see if you can come in.
         signupRedirectText.setOnClickListener(new View.OnClickListener() {
             @Override
