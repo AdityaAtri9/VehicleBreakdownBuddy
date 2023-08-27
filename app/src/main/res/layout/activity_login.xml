@@ -59,6 +59,12 @@
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"/>
 
+            <CheckBox
+                android:id="@+id/rememberMeCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remember Me"
+                android:checked="false" />
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -79,6 +85,7 @@
                 android:layout_marginTop="10dp"
                 android:textColor="@color/lavender"
                 android:textSize="18sp"/>
+
 
         </LinearLayout>
 
