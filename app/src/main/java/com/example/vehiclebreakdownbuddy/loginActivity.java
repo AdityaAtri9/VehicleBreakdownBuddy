@@ -2,10 +2,14 @@ package com.example.vehiclebreakdownbuddy;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.google.firebase.database.DataSnapshot;
@@ -17,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class loginActivity extends AppCompatActivity {
     //This line says we're creating something called "loginActivity" that uses special tools from the Android system.
-
+    private CheckBox rememberMeCheckbox;
     EditText loginUsername, loginPassword;
     Button loginButton;
     TextView signupRedirectText;
@@ -29,20 +33,34 @@ public class loginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
+
         loginUsername = findViewById(R.id.login_username);
         loginPassword = findViewById(R.id.login_password);
         loginButton = findViewById(R.id.login_button);
         signupRedirectText = findViewById(R.id.signupRedirectText);
+        rememberMeCheckbox = findViewById(R.id.rememberMeCheckbox);
         //31-34
         // find view by id is helpfully to find all the component by their respected id
         //These lines are like remembering where to find the username, password, button, and signup spot on the screen.
         // find view by id is one of the tool of class AppCompatActivity
+
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (!validateUsername() | !validatePassword()) {
                 } else {
                     checkUser();
+                    if (rememberMeCheckbox.isChecked()) {
+                        saveCredentials(loginUsername.getText().toString().trim(), loginPassword.getText().toString().trim());
+                        //if (rememberMeCheckbox.isChecked()) {
+                        //This line checks whether the "Remember Me" checkbox is checked. If the checkbox is checked (meaning the user wants to be remembered), the code inside the curly braces will be executed.
+                        //saveCredentials(loginUsername.getText().toString().trim(), loginPassword.getText().toString().trim());
+                        //This line calls the saveCredentials function and passes two arguments to it: the username and password that the user entered in the login form.
+                        //loginUsername.getText().toString().trim() retrieves the text entered in the username field, converts it to a string, and removes any leading or trailing spaces.
+                        //loginPassword.getText().toString().trim() does the same for the password field.
+                    }
                 }
             }
         });
@@ -59,6 +77,15 @@ public class loginActivity extends AppCompatActivity {
     // line 51 to 57
     // intent is basically used to jump from one activity to another activity like from signin to sign up if you are not signup earlier
     //If you haven't signed up yet, this lets you go to a place where you can get ready to enter.
+
+    private void saveCredentials(String username, String password) {
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("username", username);  // "username" key
+        editor.putString("password", password);  // "password" key
+        editor.apply();
+    }
+    //saveCredentials function is responsible for storing the username and password in SharedPreferences if the checkbox is checked.
     public Boolean validateUsername() {
         String val = loginUsername.getText().toString();
         if (val.isEmpty()) {
