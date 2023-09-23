@@ -49,7 +49,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/signup_email"
+                android:id="@+id/signupemail"
                 android:background="@drawable/lavender_border"
                 android:layout_marginTop="20dp"
                 android:padding="8dp"
@@ -59,22 +59,12 @@
                 android:textColor="@color/black"/>
 
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:id="@+id/signup_username"
-                android:background="@drawable/lavender_border"
-                android:layout_marginTop="20dp"
-                android:padding="8dp"
-                android:hint="Username"
-                android:drawableLeft="@drawable/baseline_person_24"
-                android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/signup_password"
+                android:id="@+id/signuppassword"
                 android:background="@drawable/lavender_border"
                 android:layout_marginTop="20dp"
                 android:padding="8dp"
@@ -84,15 +74,40 @@
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"/>
 
+
             <Button
+                android:id="@+id/Signupbutton"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Sign Up"
-                android:id="@+id/signup_button"
-                android:textSize="18sp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/lavender"
-                app:cornerRadius = "20dp"/>
+                android:text="Sign Up"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/googleSignUpButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/lavender_border"
+                    android:backgroundTint="@color/lavender"
+                    android:drawableLeft="@drawable/google"
+                    android:padding="5dp"
+                    android:text="Sign up withGoogle"
+                    android:textColor="@color/black"
+                    app:cornerRadius="20dp" />
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
