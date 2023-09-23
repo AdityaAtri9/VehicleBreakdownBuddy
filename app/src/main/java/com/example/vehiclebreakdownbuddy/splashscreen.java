@@ -51,23 +51,10 @@ public class splashscreen extends AppCompatActivity {
                 // Close the splash activity, like turning off a light when we don't need it anymore
                 finish();
             }
-        }, 2500);  // screen visible for 2.5 sec
+        }, 1500);  // screen visible for 1 sec
 
-        checkRememberMe(); // Call the checkRememberMe() method here
+
     }
-    private void checkRememberMe() {
-        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        String savedUsername = sharedPreferences.getString("username", null);
-        String savedPassword = sharedPreferences.getString("password", null);
 
-        Log.d("RememberMe", "Saved Username: " + savedUsername);
-        Log.d("RememberMe", "Saved Password: " + savedPassword);
-
-        if (savedUsername != null && savedPassword != null) {
-            Log.d("RememberMe", "Auto-sign in logic here");
-            // Perform your automatic sign-in logic here if needed
-        } else {
-            Log.d("RememberMe", "Proceed with normal sign-in process");
-        }
     }
-}
+
